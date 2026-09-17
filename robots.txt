@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalkulator-node.devsimply1.workers.dev/sitemap.xml
