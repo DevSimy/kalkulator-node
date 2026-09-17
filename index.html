@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>KalkulatorNode — Hitung jualan lebih cepat</title>
+    <meta
+      name="description"
+      content="Kalkulator sederhana untuk membantu menghitung harga jual, harga satuan, keuntungan, dan diskon."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a
+            class="brand"
+            href="index.html"
+            aria-label="KalkulatorNode Beranda"
+          >
+            <img
+              class="brand__full"
+              src="assets/logo/logo-full.svg"
+              alt="KalkulatorNode"
+            />
+          </a>
+
+          <nav class="site-nav" aria-label="Navigasi utama">
+            <a class="site-nav__link site-nav__link--active" href="index.html"
+              >Beranda</a
+            >
+            <a class="site-nav__link" href="#bantuan">Bantuan</a>
+          </nav>
+
+          <img
+            class="profile-icon"
+            src="assets/icons/profile.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__content">
+            <h1 id="hero-title">KalkulatorNode</h1>
+            <p>Hitung lebih mudah, usaha makin maju.</p>
+            <div class="hero__divider" aria-hidden="true"></div>
+            <h2>Mau hitung apa?</h2>
+            <span>Pilih kalkulator yang kamu butuhkan.</span>
+          </div>
+          <div class="hero__illustration">
+            <img
+              src="assets/illustration/calculator-finance.svg"
+              alt="Ilustrasi kalkulator dan keuangan"
+            />
+          </div>
+        </section>
+
+        <section class="calculator-list" aria-label="Daftar kalkulator">
+          <button class="calculator-card" data-calculator="harga-jual">
+            <div class="calculator-icon calculator-icon--price">
+              <img src="assets/icons/harga-jual.svg" alt="" />
+            </div>
+
+            <div class="calculator-content">
+              <div class="calculator-title-row">
+                <h2>Harga Jual</h2>
+                <img
+                  class="calculator-arrow"
+                  src="assets/icons/arrow-right.svg"
+                  alt=""
+                />
+              </div>
+
+              <p>Tentukan harga jual dari modal &amp; target untung</p>
+            </div>
+          </button>
+
+          <button class="calculator-card" data-calculator="harga-satuan">
+            <div class="calculator-icon calculator-icon--unit">
+              <img src="assets/icons/harga-satuan.svg" alt="" />
+            </div>
+
+            <div class="calculator-content">
+              <div class="calculator-title-row">
+                <h2>Harga Satuan</h2>
+                <img
+                  class="calculator-arrow"
+                  src="assets/icons/arrow-right.svg"
+                  alt=""
+                />
+              </div>
+
+              <p>Cari harga per pcs, botol, kg, liter, dll.</p>
+            </div>
+          </button>
+
+          <button class="calculator-card" data-calculator="hitung-untung">
+            <div class="calculator-icon calculator-icon--profit">
+              <img src="assets/icons/hitung-untung.svg" alt="" />
+            </div>
+
+            <div class="calculator-content">
+              <div class="calculator-title-row">
+                <h2>Hitung Untung</h2>
+                <img
+                  class="calculator-arrow"
+                  src="assets/icons/arrow-right.svg"
+                  alt=""
+                />
+              </div>
+
+              <p>Lihat omzet, untung, markup &amp; margin</p>
+            </div>
+          </button>
+
+          <button class="calculator-card" data-calculator="diskon">
+            <div class="calculator-icon calculator-icon--discount">
+              <img src="assets/icons/diskon.svg" alt="" />
+            </div>
+
+            <div class="calculator-content">
+              <div class="calculator-title-row">
+                <h2>Diskon</h2>
+                <img
+                  class="calculator-arrow"
+                  src="assets/icons/arrow-right.svg"
+                  alt=""
+                />
+              </div>
+
+              <p>Hitung harga promo &amp; batas diskon</p>
+            </div>
+          </button>
+        </section>
+
+        <section
+          class="quick-hint"
+          id="bantuan"
+          aria-label="Informasi KalkulatorNode"
+        >
+          <img class="quick-hint__icon" src="assets/icons/leaf.svg" alt="" />
+          <div class="quick-hint__copy">
+            <strong>Cepat · Sederhana · Gratis</strong>
+            <p>Kalkulator untuk membantu usaha kamu.</p>
+          </div>
+          <img
+            class="quick-hint__decoration"
+            src="assets/icons/leaf.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2025 KalkulatorNode. Semua hak dilindungi.</span>
+        <nav aria-label="Navigasi footer">
+          <a href="index.html">Beranda</a>
+          <a href="#bantuan">Bantuan</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

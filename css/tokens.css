@@ -1,0 +1,46 @@
+:root {
+  --color-bg: #f6f7f4;
+  --color-surface: #fff;
+  --color-surface-green: #eaf8f2;
+  --color-text: #102737;
+  --color-muted: #66849a;
+  --color-primary: #07935c;
+  --color-primary-dark: #057348;
+  --color-border: #e0e9e8;
+  --color-border-green: #dcefe7;
+  --color-success-bg: #f2fbf6;
+  --color-success-border: #d5ebdf;
+  --color-success-text: #087b4d;
+  --color-success-muted: #39785e;
+  --color-success-label: #5d7b75;
+  --color-success-meta: #718985;
+  --color-success-value: #294c40;
+  --color-error: #b54a42;
+  --color-error-border: #d8756c;
+  --color-focus: rgba(7, 147, 92, 0.2);
+  --color-input-border: #d8e5e3;
+  --color-input-focus: #51ba8e;
+  --color-input-accent: #527b79;
+  --color-icon-price-bg: #e3f8ee;
+  --color-icon-unit-bg: #eaf5ff;
+  --color-icon-profit-bg: #f0eaff;
+  --color-icon-discount-bg: #fff4dc;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 4px 14px rgba(25, 62, 70, 0.06);
+  --shadow-md: 0 12px 30px rgba(25, 62, 70, 0.09);
+  --transition-fast: 150ms ease;
+  --transition-normal: 160ms ease;
+  --transition-press: 120ms ease;
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}

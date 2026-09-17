@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kalkulator Diskon — KalkulatorNode</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a href="index.html" class="back-button" aria-label="Kembali"
+          ><img src="assets/icons/arrow-back.svg" alt=""
+        /></a>
+        <a class="brand" href="index.html" aria-label="KalkulatorNode Beranda"
+          ><img
+            class="brand__mark"
+            src="assets/logo/logo-mark.svg"
+            alt=""
+          /><span class="brand__name">Kalkulator Diskon</span></a
+        >
+        <img
+          class="profile-icon"
+          src="assets/icons/profile.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <div class="calculator-heading">
+        <h1>Hitung harga setelah diskon</h1>
+
+        <p>Ketahui harga akhir barang setelah diskon.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form class="calculator-form">
+          <div class="form-group">
+            <label for="harga-awal">Harga awal</label>
+
+            <div class="input-wrapper currency-input">
+              <span class="input-prefix">Rp</span>
+
+              <input
+                id="harga-awal"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="0"
+                aria-describedby="harga-awal-error"
+              />
+            </div>
+
+            <small class="input-error" id="harga-awal-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="diskon">Diskon</label>
+
+            <div class="input-wrapper">
+              <input
+                id="diskon"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                max="100"
+                placeholder="0"
+                aria-describedby="diskon-error"
+              />
+
+              <span>%</span>
+            </div>
+
+            <small class="input-error" id="diskon-error"></small>
+          </div>
+
+          <button type="button" class="primary-button" id="calculate-discount">
+            <img src="assets/icons/diskon.svg" alt="" />
+            Hitung diskon
+          </button>
+        </form>
+
+        <div class="calculator-output">
+          <!-- Hasil akan kita aktifkan di Step 9B -->
+          <section class="result-card" hidden>
+            <div class="result-header">
+              <span class="result-eyebrow">Hasil perhitungan</span>
+
+              <img class="result-check" src="assets/icons/check.svg" alt="" />
+            </div>
+
+            <div class="result-primary" aria-live="polite" aria-atomic="true">
+              <span class="result-primary-label">Harga setelah diskon</span>
+
+              <strong id="discount-result">Rp 80.000</strong>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-item">
+                <span>Harga awal</span>
+                <strong id="result-original-price">Rp 100.000</strong>
+              </div>
+
+              <div class="result-item">
+                <span>Potongan</span>
+                <strong id="result-discount-amount">Rp 20.000</strong>
+              </div>
+
+              <div class="result-item result-item-full">
+                <span>Diskon</span>
+                <strong id="result-discount-percent">20%</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="js/core.js"></script>
+    <script src="js/diskon.js"></script>
+  </body>
+</html>

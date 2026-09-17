@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hitung Untung — KalkulatorNode</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a href="index.html" class="back-button" aria-label="Kembali"
+          ><img src="assets/icons/arrow-back.svg" alt=""
+        /></a>
+        <a class="brand" href="index.html" aria-label="KalkulatorNode Beranda"
+          ><img
+            class="brand__mark"
+            src="assets/logo/logo-mark.svg"
+            alt=""
+          /><span class="brand__name">Hitung Untung</span></a
+        >
+        <img
+          class="profile-icon"
+          src="assets/icons/profile.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <div class="calculator-heading">
+        <h1>Hitung untung jualan</h1>
+
+        <p>Lihat keuntungan dari harga jual dan jumlah barangmu.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form class="calculator-form">
+          <div class="form-group">
+            <label for="modal-untung">Harga modal / pcs</label>
+
+            <div class="input-wrapper currency-input">
+              <span class="input-prefix">Rp</span>
+
+              <input
+                id="modal-untung"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="0"
+                aria-describedby="modal-untung-error"
+              />
+            </div>
+
+            <small class="input-error" id="modal-untung-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="jual-untung">Harga jual / pcs</label>
+
+            <div class="input-wrapper currency-input">
+              <span class="input-prefix">Rp</span>
+
+              <input
+                id="jual-untung"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="0"
+                aria-describedby="jual-untung-error"
+              />
+            </div>
+
+            <small class="input-error" id="jual-untung-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah-untung">Jumlah terjual</label>
+
+            <div class="input-wrapper">
+              <input
+                id="jumlah-untung"
+                type="number"
+                inputmode="numeric"
+                placeholder="0"
+                aria-describedby="jumlah-untung-error"
+              />
+
+              <span>pcs</span>
+            </div>
+
+            <small class="input-error" id="jumlah-untung-error"></small>
+          </div>
+
+          <button type="button" class="primary-button" id="calculate-profit">
+            <img src="assets/icons/hitung-untung.svg" alt="" />
+            Hitung untung
+          </button>
+        </form>
+
+        <div class="calculator-output">
+          <!-- Hasil akan kita aktifkan di Step 9B -->
+          <section class="result-card" hidden>
+            <div class="result-header">
+              <span class="result-eyebrow">Hasil perhitungan</span>
+
+              <img class="result-check" src="assets/icons/check.svg" alt="" />
+            </div>
+
+            <div class="result-primary" aria-live="polite" aria-atomic="true">
+              <span class="result-primary-label">Total untung</span>
+
+              <strong id="profit-result">Rp 24.000</strong>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-item">
+                <span>Untung / pcs</span>
+                <strong id="result-profit-per-unit">Rp 1.000</strong>
+              </div>
+
+              <div class="result-item">
+                <span>Jumlah terjual</span>
+                <strong id="result-profit-count">24 pcs</strong>
+              </div>
+
+              <div class="result-item">
+                <span>Modal / pcs</span>
+                <strong id="result-profit-modal">Rp 5.000</strong>
+              </div>
+
+              <div class="result-item">
+                <span>Harga jual / pcs</span>
+                <strong id="result-profit-selling">Rp 6.000</strong>
+              </div>
+            </div>
+
+            <div class="result-meta">
+              <span id="profit-markup">Markup 20%</span>
+              <span>•</span>
+              <span id="profit-margin">Margin 16,7%</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="js/core.js"></script>
+    <script src="js/harga-untung.js"></script>
+  </body>
+</html>

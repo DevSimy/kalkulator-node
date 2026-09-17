@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Harga Jual — KalkulatorNode</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a href="index.html" class="back-button" aria-label="Kembali">
+          <img src="assets/icons/arrow-back.svg" alt="" />
+        </a>
+        <a class="brand" href="index.html" aria-label="KalkulatorNode Beranda">
+          <img class="brand__mark" src="assets/logo/logo-mark.svg" alt="" />
+          <span class="brand__name">Harga Jual</span>
+        </a>
+        <img
+          class="profile-icon"
+          src="assets/icons/profile.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <div class="calculator-heading">
+        <h1>Tentukan harga jual</h1>
+
+        <p>Masukkan modal dan target keuntunganmu.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form class="calculator-form">
+          <div class="form-group">
+            <label for="modal"> Harga modal </label>
+
+            <div class="input-wrapper currency-input">
+              <span class="input-prefix">Rp</span>
+
+              <input
+                type="text"
+                id="modal"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="0"
+                aria-describedby="modal-error"
+              />
+            </div>
+
+            <small class="input-error" id="modal-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah"> Jumlah barang </label>
+
+            <div class="input-wrapper">
+              <input
+                id="jumlah"
+                type="number"
+                inputmode="numeric"
+                placeholder="24"
+                aria-describedby="jumlah-error"
+              />
+
+              <span>pcs</span>
+            </div>
+
+            <small class="input-error" id="jumlah-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="keuntungan"> Target keuntungan </label>
+
+            <div class="input-wrapper">
+              <input
+                id="keuntungan"
+                type="number"
+                inputmode="decimal"
+                placeholder="20"
+                aria-describedby="keuntungan-error"
+              />
+
+              <span>%</span>
+            </div>
+
+            <small class="input-error" id="keuntungan-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="pembulatan"> Pembulatan harga </label>
+
+            <div class="input-wrapper select-wrapper">
+              <select id="pembulatan">
+                <option value="0">Tidak ada</option>
+                <option value="100">Rp 100</option>
+                <option value="500" selected>Rp 500</option>
+                <option value="1000">Rp 1.000</option>
+              </select>
+
+              <img
+                class="select-arrow"
+                src="assets/icons/select-arrow.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="primary-button"
+            id="calculate-selling-price"
+          >
+            <img src="assets/icons/harga-jual.svg" alt="" />
+            Hitung harga jual
+          </button>
+        </form>
+
+        <div class="calculator-output">
+          <!-- Hasil akan kita aktifkan di Step 9B -->
+          <section class="result-card" hidden>
+            <div class="result-header">
+              <span class="result-eyebrow">Hasil perhitungan</span>
+              <img class="result-check" src="assets/icons/check.svg" alt="" />
+            </div>
+
+            <div class="result-primary" aria-live="polite" aria-atomic="true">
+              <span class="result-primary-label"> Harga jual / pcs </span>
+
+              <strong id="selling-price-result"> Rp 6.000 </strong>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-item">
+                <span> Modal / pcs </span>
+
+                <strong id="result-modal"> Rp 5.000 </strong>
+              </div>
+
+              <div class="result-item">
+                <span> Untung / pcs </span>
+
+                <strong id="result-profit"> Rp 1.000 </strong>
+              </div>
+
+              <div class="result-item result-item-full">
+                <span> Total untung </span>
+
+                <strong id="result-total-profit"> Rp 24.000 </strong>
+              </div>
+            </div>
+
+            <div class="result-meta">
+              <span id="result-markup"> Markup 20% </span>
+
+              <span>•</span>
+
+              <span id="result-margin"> Margin 16,7% </span>
+            </div>
+          </section>
+
+          <aside class="tip-card">
+            <img
+              class="tip-icon"
+              src="assets/icons/tip.svg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div>
+              <strong>Tips</strong>
+
+              <p>
+                Harga jual bisa disesuaikan dengan kondisi pasar dan harga
+                kompetitor.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <script src="js/core.js"></script>
+    <script src="js/harga-jual.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Harga Satuan — KalkulatorNode</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a href="index.html" class="back-button" aria-label="Kembali"
+          ><img src="assets/icons/arrow-back.svg" alt=""
+        /></a>
+        <a class="brand" href="index.html" aria-label="KalkulatorNode Beranda"
+          ><img
+            class="brand__mark"
+            src="assets/logo/logo-mark.svg"
+            alt=""
+          /><span class="brand__name">Harga Satuan</span></a
+        >
+        <img
+          class="profile-icon"
+          src="assets/icons/profile.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <div class="calculator-heading">
+        <h1>Hitung harga satuan</h1>
+
+        <p>Ketahui harga per satuan barang dengan cepat.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form class="calculator-form">
+          <div class="form-group">
+            <label for="harga-total">Harga total</label>
+
+            <div class="input-wrapper currency-input">
+              <span class="input-prefix">Rp</span>
+
+              <input
+                id="harga-total"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="0"
+                aria-describedby="harga-total-error"
+              />
+            </div>
+
+            <small class="input-error" id="harga-total-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah-satuan">Jumlah barang</label>
+
+            <div class="input-wrapper">
+              <input
+                id="jumlah-satuan"
+                type="number"
+                inputmode="numeric"
+                placeholder="0"
+                aria-describedby="jumlah-satuan-error"
+              />
+
+              <span>unit</span>
+            </div>
+
+            <small class="input-error" id="jumlah-satuan-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="satuan">Satuan</label>
+
+            <div class="input-wrapper select-wrapper">
+              <select id="satuan">
+                <option value="pcs" selected>pcs</option>
+                <option value="pack">pack</option>
+                <option value="dus">dus</option>
+                <option value="box">box</option>
+              </select>
+
+              <img
+                class="select-arrow"
+                src="assets/icons/select-arrow.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="primary-button"
+            id="calculate-unit-price"
+          >
+            <img src="assets/icons/harga-satuan.svg" alt="" />
+            Hitung harga satuan
+          </button>
+        </form>
+
+        <div class="calculator-output">
+          <!-- Hasil akan kita aktifkan di Step 9B -->
+          <section class="result-card" hidden>
+            <div class="result-header">
+              <span class="result-eyebrow">Hasil perhitungan</span>
+
+              <img class="result-check" src="assets/icons/check.svg" alt="" />
+            </div>
+
+            <div class="result-primary" aria-live="polite" aria-atomic="true">
+              <span class="result-primary-label">Harga / satuan</span>
+
+              <strong id="unit-price-result">Rp 5.000</strong>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-item">
+                <span>Harga total</span>
+                <strong id="result-total-price">Rp 120.000</strong>
+              </div>
+
+              <div class="result-item">
+                <span>Jumlah</span>
+                <strong id="result-unit-count">24 pcs</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="js/core.js"></script>
+    <script src="js/harga-satuan.js"></script>
+  </body>
+</html>
