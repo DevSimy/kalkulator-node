@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://kalkulator-node.devsimply1.workers.dev/</loc>
   </url>
-
   <url>
-    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-jual</loc>
+    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-jual.html</loc>
   </url>
-
   <url>
-    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-satuan</loc>
+    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-satuan.html</loc>
   </url>
-
   <url>
-    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-untung</loc>
+    <loc>https://kalkulator-node.devsimply1.workers.dev/harga-untung.html</loc>
   </url>
-
   <url>
-    <loc>https://kalkulator-node.devsimply1.workers.dev/diskon</loc>
+    <loc>https://kalkulator-node.devsimply1.workers.dev/diskon.html</loc>
   </url>
-
 </urlset>
